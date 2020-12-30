@@ -58,7 +58,7 @@ Camagru is a web application similar to instagram that is used for uploading and
 │   ├── stickers_1.png
 │   ├── stickers_2.png
 │   └── stickers_3.png
-├── README.md                                                      # All the code after this README.md file are the php files
+├── README.md                                                      # All the files after this README.md file are the php files
 ├── author
 ├── Auth.php
 ├── check.php
