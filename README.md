@@ -35,19 +35,18 @@ Camagru is a web application similar to instagram that is used for uploading and
 # File structure
 ```bash
 .
-├── Auth.php
-├── CSS
+├── CSS                                                            # This is the directory where i store all my CSS files
 │   ├── comment_likes.css
 │   ├── edit_info.css
 │   ├── my_gallery.css
 │   ├── pagination.css
 │   ├── process_tmp_img.css
 │   └── webcam.css
-├── Config
+├── Config                                                         # This is the directory where a store my configuration files 
 │   ├── database.php
 │   ├── setup_backup.php
 │   └── setup_db.php
-├── Pictures
+├── Pictures                                                       # This is an asset directory where i store all png's that are used in Camagru
 │   ├── Logo.png
 │   ├── Untitled.png
 │   ├── gallery.png
@@ -55,9 +54,13 @@ Camagru is a web application similar to instagram that is used for uploading and
 │   ├── trash.png
 │   ├── —Pngtree—camera glyph black icon_3754744.png
 │   └── —Pngtree—file upload icon_4646955.png
-├── README.md
+├── stickers                                                       # This directory is used to store the stickers that will be used in the image editor
+│   ├── stickers_1.png
+│   ├── stickers_2.png
+│   └── stickers_3.png
+├── README.md                                                      # All the code after this README.md file are the php files
 ├── author
-├── bitnami.css
+├── Auth.php
 ├── check.php
 ├── comment_likes.php
 ├── confirmation.php
@@ -85,10 +88,6 @@ Camagru is a web application similar to instagram that is used for uploading and
 ├── sign_up.php
 ├── signup_02.php
 ├── signup_03.php
-├── stickers
-│   ├── stickers_1.png
-│   ├── stickers_2.png
-│   └── stickers_3.png
 ├── test.php
 ├── upload.php
 ├── upload_2.php
