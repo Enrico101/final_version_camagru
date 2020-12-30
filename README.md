@@ -95,7 +95,7 @@ Camagru is a web application similar to instagram that is used for uploading and
 ├── verified.php
 └── webcam.php
 ```
-#Testing
+# Testing
 1) Preliminaries: Build in PHP, no frameworks, no package manager, index.php and config files are present and PDO must be used
 
 2) Launch the server and no errors must be present
