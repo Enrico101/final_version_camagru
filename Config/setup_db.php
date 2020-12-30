@@ -6,7 +6,7 @@
     try {
         $db = new PDO($DB_DSN_2, $DB_USER, $DB_PASSWORD);
     }
-    catch (exception $e) {
+     (exception $e) {
         echo $e;
     }
     $db->exec("CREATE DATABASE IF NOT EXISTS Camagru;");

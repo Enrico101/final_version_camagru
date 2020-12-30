@@ -69,7 +69,7 @@
                         $x = 1;
                         $y = 1;
                         $x = $total_pages;
-                        while ($x >= 1)
+                         ($x >= 1)
                         {?>
                         <input class="upload_button" type="submit" value='<?php echo $x?>' name="page"/>
                         <?php
