@@ -1,0 +1,164 @@
+.heading {
+    border-bottom: 1px solid #cac6c6;
+    background-color: white;
+}
+body {
+    background-color: #f3f2f2;
+    margin: 0px;
+}
+.logo {
+    margin-left: 20px;
+    width: 90px;
+}
+.user_name {
+    float: right;
+    margin-top: 35px;
+    margin-right: 30px;
+}
+.logout {
+    float: right;
+    margin-top: 35px;
+    margin-right: 45px;
+}
+.gallery {
+    width: 40px;
+    position: relative;
+    left: 75px;
+    top: -23px;
+}
+a:link {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 17px;
+}
+.post {
+    font-size: 30px;
+    color: #2f2e2f;
+    position: relative;
+    top: 12px;
+    margin-left: 15px;
+    float: left;
+}
+.cam {
+    font-size: 30px;
+    color: #2f2e2f;
+    position: relative;
+    top: 12px;
+    margin-left: 15px;
+    float: left;
+}
+.upload {
+    margin-top: 30px;
+    position: relative;
+    left: -10px;
+}
+.upload_button {
+    position: relative;
+    left: 385px;
+    color: dimgrey;
+    border-radius: 20px;
+    font-size: 0px;
+    height: 15px;
+    width: 3px;
+    background-color: dimgrey;
+    border: 1px solid dimgrey;
+}
+.gal {
+    font-size: 30px;
+    color: #2f2e2f;
+    position: relative;
+    top: 12px;
+    margin-left: 15px;
+    float: left;
+}
+.booth {
+    width: 887px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    border: 1px solid grey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    background-color: white;
+}
+#pic_button {
+    width: 810px;
+    height: 40px;
+}
+#canvas {
+    border: 2px solid grey;
+}
+#image {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    top: 40px;
+    left: 218px;
+}
+   .user_gal {
+    font-size: 30px;
+    color: #2f2e2f;
+    position: relative;
+    top: 12px;
+    margin-left: 15px;
+    float: left;
+}
+#video {
+}
+.thumbnail {
+    margin: auto;
+}
+.foot {
+    font-size: 10px;
+    margin-top: 80px;
+    border-top: 1px solid dimgrey;
+    padding: 5px;
+    background-color: white;
+    height: 700px;
+}
+#img-cam {
+    width: 40px;
+    margin-top: -4px;
+}
+#upload_button {
+    width: 810px;
+    height: 40px;
+}
+#img_upload {
+    width: 810px;
+    height: 40px;
+    margin-left: 40px;
+}
+#tmp_buttons {
+    width: 810px;
+    height: 40px;
+    margin-left: 40px;
+}
+#img-sticker {
+    width: 30px;
+}
+#OR {
+    margin-bottom: -17px;
+}
+#booth_2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 17%;
+    margin-right: 17%; 
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+}
+#booth_3 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 17%;
+    margin-right: 17%; 
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+}
+#image_rack {
+    margin-left: 33px;
+}

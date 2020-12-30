@@ -8,9 +8,9 @@
         $img = str_replace(' ', '+', $img);
         $data = base64_decode($img);
         $file = 'Uploads/img'.date('YmdHis').'.png';
-        $result = $db->prepare("INSERT INTO camagru_users.user_images (`Image`, `Username`) VALUES (?, ?)");
+        $result = $db->prepare("INSERT INTO camagru.images (`Image`, `User_ID`) VALUES (?, ?)");
         $result->bindValue(1, $file);
-        $result->bindValue(2, $_SESSION['Username']);
+        $result->bindValue(2, $_SESSION['User_ID']);
         $result->execute();
         file_put_contents($file, $data);
         header("location: webcam.php");

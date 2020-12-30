@@ -27,11 +27,11 @@
     }
     else
         header("location: sign_up.php");
-    $result = $db->prepare("SELECT Username FROM camagru_users.users WHERE Username=?");
+    $result = $db->prepare("SELECT Username FROM camagru.users WHERE Username=?");
     $result->bindValue(1, $username);
     $result->execute();
     $check_username = $result->fetch();
-    $results = $db->prepare("SELECT Email FROM camagru_users.users WHERE Email=?");
+    $results = $db->prepare("SELECT Email FROM camagru.users WHERE Email=?");
     $results->bindValue(1, $email);
     $results->execute();
     $check_email = $results->fetch();

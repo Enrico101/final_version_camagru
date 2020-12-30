@@ -5,7 +5,7 @@
         include ("connect.php");
         //for default value display
         $total_items_per_page_default = 5;
-        $result_set_default = $db->query("SELECT * FROM camagru_users.user_images");
+        $result_set_default = $db->query("SELECT * FROM camagru.images");
         $array_default = $result_set_default->fetchall();
         if (count($array_default) > 0)
         {
@@ -27,13 +27,13 @@
             }
             //Set the offset for the query
             $offset = ($page_no - 1) * $total_items_per_page;
-            $statement = $db->query("SELECT ID, Image, Username FROM camagru_users.user_images LIMIT $offset, $total_items_per_page");
+            $statement = $db->query("SELECT Image_ID, Image, User_ID FROM camagru.images LIMIT $offset, $total_items_per_page");
             if ($statement)
             {
                 $items_array = $statement->fetchall();
                 //var_dump($items_array);
                 //get the total number of pages.
-                $result_set = $db->query("SELECT * FROM camagru_users.user_images");
+                $result_set = $db->query("SELECT * FROM camagru.images");
                 $array = $result_set->fetchall();
                 $total_items = count($array);
                 $total_pages = ceil($total_items / $total_items_per_page);
@@ -43,120 +43,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            .heading {
-                border-bottom: 1px solid #cac6c6;
-                background-color: white;
-            }
-            body {
-                background-color: #f3f2f2;
-                margin: 0px;
-            }
-            .logo {
-                margin-left: 20px;
-                width: 90px;
-            }
-            .user_name {
-                float: right;
-                margin-top: 35px;
-                margin-right: 30px;
-            }
-            .logout {
-                float: right;
-                margin-top: 35px;
-                margin-right: 45px;
-            }
-            .gallery {
-                width: 40px;
-                position: relative;
-                left: 75px;
-                top: -23px;
-            }
-            a:link {
-                text-decoration: none;
-                font-family: monospace;
-                font-size: 17px;
-            }
-            .post {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            .cam {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            .upload {
-                margin-top: 30px;
-                position: relative;
-                left: -10px;
-            }
-            .upload_button {
-                position: relative;
-                left: 385px;
-                color: dimgrey;
-                border-radius: 20px;
-                font-size: 0px;
-                height: 15px;
-                width: 3px;
-                background-color: dimgrey;
-                border: 1px solid dimgrey;
-            }
-            .gal {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            .booth {
-                width: 887px;
-                margin: auto;
-                margin-top: 80px;
-                text-align: center;
-            }
-            #pic_button {
-            }
-            #canvas {
-                border: 2px solid grey;
-            }
-            #image {
-                width: 400px;
-                height: 300px;
-                position: relative;
-                top: 40px;
-                left: 218px;
-            }
-               .user_gal {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            #video {
-            }
-            .thumbnail {
-                margin: auto;
-            }
-            .foot {
-                font-size: 10px;
-                margin-top: 80px;
-                border-top: 1px solid dimgrey;
-                padding: 5px;
-                background-color: white;
-                height: 700px;
-            }
-        </style>
+        <link rel="stylesheet" href="CSS\webcam.css">
     </head>
     <body>
         <header class="heading">
@@ -173,34 +60,41 @@
             <video id="video" width="400px" height="300px"></video>
             <canvas id="canvas" width="400px" height="300px"></canvas>
             <br />
-            <a href="#" id="pic_button">take pic</a>
+            <button id="pic_button"><a href="#"><img id="img-cam" src="Pictures\—Pngtree—camera glyph black icon_3754744.png"></a></button>
+            <p id="OR">OR</p>
             <form action="upload.php" method="post" enctype="multipart/form-data">
-                    <input class="upload" type="file" name="image" required>
+                    <input id="external_source" class="upload" type="file" name="image" required>
                     <input class="upload" type="submit" name="submit">
                 </form>
             <img id="image" src="" hidden>
         </div>
         <br />
-        <div style="margin-left: 50%; margin-right: 50%;">
-            <form action="process_img.php" method="post" onsubmit="upload_img();">
-                <input id="img_sub" name="img" type="hidden" value="">
-                 <input id="img_upload" type="submit" value="Upload">
-             </form>
-               <form action="process_tmp_img.php" method="post" onsubmit="tmp_upload();">
-                <input  id="tmp_img" name="s1" type="hidden" value="">
-                <input type="submit" value="Happy Emoji">
-            </form>
-            <form action="process_tmp_img.php" method="post" onsubmit="tmp_u2();">
-                <input  id="tmp_i2" name="s2" type="hidden" value="">
-                <input type="submit" value="Angry Emoji">
-            </form>
-            <form action="process_tmp_img.php" method="post" onsubmit="tmp_u3();">
-                <input  id="tmp_i3" name="s3" type="hidden" value="">
-                <input type="submit" value="Sick Emoji">
-            </form>
+        <div >
+            <div id="booth_2">
+                <form action="process_img.php" method="post" onsubmit="upload_img();">
+                    <input id="img_sub" name="img" type="hidden" value="">
+                    <button id="img_upload" type="submit" value="Upload"><img id="img-cam" src="Pictures\—Pngtree—file upload icon_4646955.png"></img></button>
+                </form>
+                <br />
+                <form action="process_tmp_img.php" method="post" onsubmit="tmp_upload();">
+                    <input  id="tmp_img" name="s1" type="hidden" value="">
+                    <button id="tmp_buttons" type="submit"><img id="img-sticker" src="stickers\stickers_1.png"></img></button>
+                </form>
+                <br />
+                <form action="process_tmp_img.php" method="post" onsubmit="tmp_u2();">
+                    <input  id="tmp_i2" name="s2" type="hidden" value="">
+                    <button id="tmp_buttons" type="submit"><img id="img-sticker" src="stickers\stickers_2.png"></img></button>
+                </form>
+                <br/>
+                <form action="process_tmp_img.php" method="post" onsubmit="tmp_u3();">
+                    <input  id="tmp_i3" name="s3" type="hidden" value="">
+                    <button id="tmp_buttons" type="submit"><img id="img-sticker" src="stickers\stickers_3.png"></img></button>
+                </form>
+            </div>
         </div>
-        <div class="thumbnail">
-                <form action="" method="get">
+        <br>
+        <div id="booth_3">
+                <form style="margin-left: 30px" action="" method="get">
                     <?php
                     if (count($array_default) > 0)
                     {
@@ -217,22 +111,24 @@
                             }
                     ?>
                 </form>
-                <?php
-                    $y = count($items_array);
-                    $y--;
-                    while ($y >= 0)
-                    {
-                        if ($_SESSION['Username'] == $items_array[$y]['Username'])
+                <div id="image_rack">
+                    <?php
+                        $y = count($items_array);
+                        $y--;
+                        while ($y >= 0)
                         {
-                ?>
-                <a href='<?php echo $items_array[$y]['Image'];?>' target='_self'><img style="padding: 1px;"width="160px" height="156px" src='<?php echo $items_array[$y]['Image'];?>'></a>
-                <?php
+                            if ($_SESSION['User_ID'] == $items_array[$y]['User_ID'])
+                            {
+                    ?>
+                    <a href='<?php echo $items_array[$y]['Image'];?>' target='_self'><img style="padding: 1px;"width="160px" height="156px" src='<?php echo $items_array[$y]['Image'];?>'></a>
+                    <?php
+                            }
+                        $y--;
                         }
-                     $y--;
-                    }
-                    }
-                    }
-                ?>
+                        }
+                        }
+                    ?>
+                </div>
             </div>
         <script src="photo.js">
         </script>

@@ -8,7 +8,7 @@
             $_SESSION["Username"] = $_POST["Username"];
             $_SESSION["Password"] = $_POST["Password"];
             $password_hash = hash("whirlpool", $_POST["Password"]);
-            $statement = $db->prepare("SELECT Username, Password, Status FROM camagru_users.users WHERE Username=?");
+            $statement = $db->prepare("SELECT User_ID, Username, Password, Status FROM camagru.users WHERE Username=?");
             $statement->bindValue(1, $_SESSION["Username"]);
             $statement->execute();
             $authenticate = $statement->fetch();
@@ -18,6 +18,7 @@
                 {
                     if ($authenticate["Status"] == "Active")
                     {
+                        $_SESSION["User_ID"] = $authenticate["User_ID"];
                         header("location: pagination.php");
                     }
                     else

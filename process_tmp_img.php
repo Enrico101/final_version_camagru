@@ -126,124 +126,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            .heading {
-                border-bottom: 1px solid #cac6c6;
-                background-color: white;
-            }
-            body {
-                background-color: #f3f2f2;
-                margin: 0px;
-            }
-            .logo {
-                margin-left: 20px;
-                width: 90px;
-            }
-            .user_name {
-                float: right;
-                margin-top: 35px;
-                margin-right: 30px;
-            }
-            .logout {
-                float: right;
-                margin-top: 35px;
-                margin-right: 45px;
-            }
-            .gallery {
-                width: 40px;
-                position: relative;
-                left: 75px;
-                top: -23px;
-            }
-            a:link {
-                text-decoration: none;
-                font-family: monospace;
-                font-size: 17px;
-            }
-            .post {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            .cam {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            .upload {
-                margin-top: 120px;
-                position: relative;
-                left: -210px;
-            }
-            .upload_button {
-                margin-top: 120px;
-                margin-left: 10px;
-                position: relative;
-                left: -230px;
-            }
-            .gal {
-                font-size: 30px;
-                color: #2f2e2f;
-                position: relative;
-                top: 12px;
-                margin-left: 15px;
-                float: left;
-            }
-            .booth {
-                position: relative;
-                top: 45px;
-                left: -200px;
-            }
-            .pic_button {
-                position: relative;
-                top: 30px;
-                left: -250px;
-            }
-            #canvas {
-                width: 400px;
-                height: 300px;
-                position: relative;
-                top: 40px;
-                left: 218px;
-                border: 2px solid black;
-                display: none;
-            }
-            #image {
-                width: 400px;
-                height: 300px;
-                position: relative;
-                top: 40px;
-                left: 218px;
-                border: 2px solid black;
-            }
-            .img_filter {
-                position: relative;
-                left: -205px;
-                top: 50px;
-            }
-            .upload_b {
-                position: relative;
-                top: 55px;
-                left: 12px;
-            }
-            .go_back {
-                position: relative;
-                top: 55px;
-                left: 60px;
-            }
-            .add {
-                font-family: monospace;
-                position: relative;
-                top: 90px;
-                left: 10px;
-            }
-        </style>
+        <link rel="stylesheet" href="CSS\process_tmp_img.css">
     </head>
     <body>
         <header class="heading">
@@ -256,25 +139,29 @@
             <a class="cam" href="webcam.php">CAMERA</a>
             <a class="gal" href="pagination.php">GALLERY</a>
         </nav>
-        <div>
+        <br>
+        <br>
+        <br>
+        <div id="image_container">
             <?php
                // session_start();
                 include "connect.php";
             ?>
             <img class="img_filter" src='<?php echo $_SESSION['tmp_loc'];?>'>
-            <br />
-            <a class="upload_b" href="upload_2.php">upload</a>
-            <a class="go_back" href="webcam.php">Go Back</a>
         </div>
-        <div>
+        <br>
+        <div id="button_container">
+            <button id="just_button"><a href="upload_2.php"><img id="img_pref_2" src="Pictures\—Pngtree—file upload icon_4646955.png"></a></button>
+            <br>
+            <button  id="just_button"><a id="go_back" href="webcam.php">Go Back</a></button>
             <form action="" method="post">
-                <input class="add" name="sticker" type="submit" value="Happy Emoji">
+                <button  id="just_button" name="sticker" type="submit" value="Happy Emoji"><img id="img_pref" src="stickers\stickers_1.png"></button>
             </form>
             <form action="" method="post">
-                <input class="add" name="sticker" type="submit" value="Angry Emoji">
+                <button  id="just_button" name="sticker" type="submit" value="Angry Emoji"><img id="img_pref" src="stickers\stickers_2.png"></button>
             </form>
             <form action="" method="post">
-                <input class="add" name="sticker" type="submit" value="Sick Emoji">
+                <button  id="just_button" name="sticker" type="submit" value="Sick Emoji"><img id="img_pref" src="stickers\stickers_3.png"></button>
             </form>
         </div>
     </body>

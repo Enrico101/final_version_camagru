@@ -5,14 +5,14 @@
     {
         $username = $_SESSION['POST_USERNAME'];
         $email = $_SESSION['POST_EMAIL'];
-        $check = $db->query("SELECT Username, Email FROM camagru_users.users;");
+        $check = $db->query("SELECT Username, Email FROM camagru.users;");
         $results = $check->fetchall();
         $username = $_SESSION['POST_USERNAME'];
         $password_hash = hash("whirlpool", $_SESSION['POST_PASSWORD']);
         //
         $str = "1234567890abcdefghigjlmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ";
         $vkey = substr(str_shuffle($str), 0, 8);
-        $statement = $db->prepare("INSERT INTO camagru_users.users (`Username`, `Password`, `Email`, `Token`, `Status`, `Connection`, `Notifications`) VALUES (?, ?, ?, ?, ?, ?, ?);");
+        $statement = $db->prepare("INSERT INTO camagru.users (`Username`, `Password`, `Email`, `Token`, `Status`, `Connection`, `Notifications`) VALUES (?, ?, ?, ?, ?, ?, ?);");
         $statement->bindValue(1, $_SESSION['POST_USERNAME']);
         $statement->bindValue(2, $password_hash);
         $statement->bindValue(3, $_SESSION['POST_EMAIL']);

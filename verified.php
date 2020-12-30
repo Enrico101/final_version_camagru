@@ -4,13 +4,13 @@
     if (isset($_GET['vkey']))
     {
         $vkey =  $_GET['vkey'];
-        $results = $db->prepare("SELECT Token FROM camagru_users.users WHERE Token=?");
+        $results = $db->prepare("SELECT Token FROM camagru.users WHERE Token=?");
         $results->bindValue(1, $vkey);
         $results->execute();
         $result_set = $results->fetch();
         if ($result_set)
         {
-            $statemnet = $db->prepare("UPDATE camagru_users.users SET Status='Active', Token='Done' WHERE Token=?");
+            $statemnet = $db->prepare("UPDATE camagru.users SET Status='Active', Token='Done' WHERE Token=?");
             $statemnet->bindValue(1, $vkey);
             $statemnet->execute();
         }
