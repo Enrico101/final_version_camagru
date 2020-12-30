@@ -30,3 +30,69 @@ Camagru is a web application similar to instagram that is used for uploading and
 7) Register an account on camagru and verify your account
 
 8) Login and you all done !
+
+
+# File structure
+```bash
+.
+├── Auth.php
+├── CSS
+│   ├── comment_likes.css
+│   ├── edit_info.css
+│   ├── my_gallery.css
+│   ├── pagination.css
+│   ├── process_tmp_img.css
+│   └── webcam.css
+├── Config
+│   ├── database.php
+│   ├── setup_backup.php
+│   └── setup_db.php
+├── Pictures
+│   ├── Logo.png
+│   ├── Untitled.png
+│   ├── gallery.png
+│   ├── heart.png
+│   ├── trash.png
+│   ├── —Pngtree—camera glyph black icon_3754744.png
+│   └── —Pngtree—file upload icon_4646955.png
+├── README.md
+├── author
+├── bitnami.css
+├── check.php
+├── comment_likes.php
+├── confirmation.php
+├── connect.php
+├── create.php
+├── create_directories.php
+├── edit_info.php
+├── favicon.ico
+├── filter_1.php
+├── forgot_password.php
+├── index.php
+├── link_pass.php
+├── log_user_off.php
+├── loggedon.php
+├── login.php
+├── my_gallery.php
+├── pagination.php
+├── pagination_2.php
+├── pass_auth.php
+├── pass_reset.php
+├── photo.js
+├── process_img.php
+├── process_tmp_img.php
+├── reset.php
+├── sign_up.php
+├── signup_02.php
+├── signup_03.php
+├── stickers
+│   ├── stickers_1.png
+│   ├── stickers_2.png
+│   └── stickers_3.png
+├── test.php
+├── upload.php
+├── upload_2.php
+├── user_gallery.php
+├── verified.php
+└── webcam.php
+```
