@@ -95,3 +95,33 @@ Camagru is a web application similar to instagram that is used for uploading and
 ├── verified.php
 └── webcam.php
 ```
+#Testing
+1) Preliminaries: Build in PHP, no frameworks, no package manager, index.php and config files are present and PDO must be used
+
+2) Launch the server and no errors must be present
+
+3) Account creation
+
+4) Login
+
+5) Capture picture with webcam
+
+6) View public gallery
+
+7) Edit user account details
+
+Expected outcomes
+
+1) The repo must show that the code is build in PHP. There should be no frameworks or package manager and PDO should be used
+
+2) The server should be running with no errors produced
+
+3) User should be able to register and get a notification indicating to verify his/her account
+
+4) After verification, user should be able to use his/her credentials to login in
+
+5) User should be able to capture pictures with webcam and a preview should be present
+
+6) User should be able to see a list of other users images
+
+7) The user should be able to edit there account details at any given time.
