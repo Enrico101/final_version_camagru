@@ -1,14 +1,14 @@
 # Camagru
 Camagru is a web application similar to instagram that is used for uploading and sharing images.
 # Requirements
-PHP
+1) PHP
 
-MAMP
+2) MAMP
 
-Javascript
+3) Javascript
 
-CSS
+4) CSS
 
-HTML
+5) HTML
 
-MySQL
+7) MySQL
