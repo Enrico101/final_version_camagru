@@ -31,6 +31,22 @@ Camagru is a web application similar to instagram that is used for uploading and
 
 8) Login and you all done !
 
+# Application usgae
+
+1) First signup and verify your account
+
+2) Then login to verify your account works
+
+3) Once logged on, You will have these sections: public gallery, gallery, webcam and edit info.
+
+4) To take photos or upload photos, click on the webcam section.
+
+5) To view other peoples photos, click on public gallery
+
+6) To view your own photos, click on gallery
+
+7) To edit your account information, click on edit info
+
 
 # File structure
 ```bash
