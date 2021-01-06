@@ -126,7 +126,7 @@ Camagru is a web application similar to instagram that is used for uploading and
 
 7) Edit user account details
 
-Expected outcomes
+Expected outcomes and achieved outcomes
 
 1) The repo must show that the code is build in PHP. There should be no frameworks or package manager and PDO should be used
 
