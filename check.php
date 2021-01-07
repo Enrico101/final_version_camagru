@@ -37,7 +37,7 @@
     $check_email = $results->fetch();
     if ($check_username)
     {
-        header("location: signup_02.php");
+        header("location: signup.php");
     }
     elseif (!preg_match("/(?=.*[A-Z0-9])(?=.*[a-z]).{8,}/", $password))
     {
@@ -45,7 +45,7 @@
     }
     elseif ($check_email)
     {
-        header("location: signup_03.php");
+        header("location: signup.php");
     }
     else
     {
