@@ -114,9 +114,8 @@ Camagru is a web application similar to instagram that is used for uploading and
 
 # Application diagram
 
-```bash
 ![alt text](https://github.com/Enrico101/final_version_camagru/blob/master/Pictures/UML%20diagram%20complete%20-%20Page%201%20(1).png?raw=true)
-```
+
 
 # Testing
 1) Preliminaries: Build in PHP, no frameworks, no package manager, index.php and config files are present and PDO must be used
