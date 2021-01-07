@@ -31,22 +31,47 @@ Camagru is a web application similar to instagram that is used for uploading and
 
 8) Login and you all done !
 
+# Application usgae
+
+1) First signup and verify your account
+
+2) Then login to verify your account works
+
+3) Once logged on, You will have these sections: public gallery, gallery, webcam and edit info.
+
+4) To take photos or upload photos, click on the webcam section.
+
+5) To view other peoples photos, click on public gallery
+
+6) To view your own photos, click on gallery
+
+7) To edit your account information, click on edit info
+
 
 # File structure
 ```bash
 .
-├── CSS                                                            # This is the directory where i store all my CSS files
+├── Auth.php
+├── CSS
 │   ├── comment_likes.css
-│   ├── edit_info.css
-│   ├── my_gallery.css
-│   ├── pagination.css
+│   ├── confirmations.css  
+│   ├── edit_info.css      
+│   ├── forgot_password.css
+│   ├── index.css
+│   ├── login.css
+│   ├── my_gallery.css     
+│   ├── pagination.css     
+│   ├── pass_reset.css     
 │   ├── process_tmp_img.css
+│   ├── signup.css
+│   ├── verified.css       
 │   └── webcam.css
-├── Config                                                         # This is the directory where a store my configuration files 
-│   ├── database.php
-│   ├── setup_backup.php
-│   └── setup_db.php
-├── Pictures                                                       # This is an asset directory where i store all png's that are used in Camagru
+├── Config
+│   ├── database.php       
+│   └── setup_db.php       
+├── JS
+│   └── photo.js
+├── Pictures
 │   ├── Logo.png
 │   ├── Untitled.png
 │   ├── gallery.png
@@ -54,13 +79,9 @@ Camagru is a web application similar to instagram that is used for uploading and
 │   ├── trash.png
 │   ├── —Pngtree—camera glyph black icon_3754744.png
 │   └── —Pngtree—file upload icon_4646955.png
-├── stickers                                                       # This directory is used to store the stickers that will be used in the image editor
-│   ├── stickers_1.png
-│   ├── stickers_2.png
-│   └── stickers_3.png
-├── README.md                                                      # All the files after this README.md file are the php files
+├── README.md
+├── Trash
 ├── author
-├── Auth.php
 ├── check.php
 ├── comment_likes.php
 ├── confirmation.php
@@ -69,29 +90,24 @@ Camagru is a web application similar to instagram that is used for uploading and
 ├── create_directories.php
 ├── edit_info.php
 ├── favicon.ico
-├── filter_1.php
 ├── forgot_password.php
 ├── index.php
-├── link_pass.php
 ├── log_user_off.php
-├── loggedon.php
 ├── login.php
 ├── my_gallery.php
 ├── pagination.php
-├── pagination_2.php
 ├── pass_auth.php
 ├── pass_reset.php
-├── photo.js
 ├── process_img.php
 ├── process_tmp_img.php
 ├── reset.php
 ├── sign_up.php
-├── signup_02.php
-├── signup_03.php
-├── test.php
+├── stickers
+│   ├── stickers_1.png
+│   ├── stickers_2.png
+│   └── stickers_3.png
 ├── upload.php
 ├── upload_2.php
-├── user_gallery.php
 ├── verified.php
 └── webcam.php
 ```
@@ -110,7 +126,7 @@ Camagru is a web application similar to instagram that is used for uploading and
 
 7) Edit user account details
 
-Expected outcomes
+Expected outcomes and achieved outcomes
 
 1) The repo must show that the code is build in PHP. There should be no frameworks or package manager and PDO should be used
 
