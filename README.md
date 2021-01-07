@@ -31,7 +31,7 @@ Camagru is a web application similar to instagram that is used for uploading and
 
 8) Login and you all done !
 
-# Application usgae
+# Application usage
 
 1) First signup and verify your account
 
@@ -51,8 +51,7 @@ Camagru is a web application similar to instagram that is used for uploading and
 # File structure
 ```bash
 .
-├── Auth.php
-├── CSS
+├── CSS                                                  # This is the directory where i store all my CSS files
 │   ├── comment_likes.css
 │   ├── confirmations.css  
 │   ├── edit_info.css      
@@ -66,12 +65,12 @@ Camagru is a web application similar to instagram that is used for uploading and
 │   ├── signup.css
 │   ├── verified.css       
 │   └── webcam.css
-├── Config
+├── Config                                               # This is the directory where i store my configuration files 
 │   ├── database.php       
 │   └── setup_db.php       
-├── JS
+├── JS                                                   # This directory is where is store all my javascript files
 │   └── photo.js
-├── Pictures
+├── Pictures                                             # This is an asset directory where i store all png's that are used in Camagru
 │   ├── Logo.png
 │   ├── Untitled.png
 │   ├── gallery.png
@@ -79,7 +78,12 @@ Camagru is a web application similar to instagram that is used for uploading and
 │   ├── trash.png
 │   ├── —Pngtree—camera glyph black icon_3754744.png
 │   └── —Pngtree—file upload icon_4646955.png
-├── README.md
+├── stickers                                             # This directory is used to store the stickers that will be used in the image editor
+│   ├── stickers_1.png
+│   ├── stickers_2.png
+│   └── stickers_3.png
+├── README.md                                            # All the files after this README.md file are the php files
+├── Auth.php
 ├── Trash
 ├── author
 ├── check.php
@@ -102,10 +106,6 @@ Camagru is a web application similar to instagram that is used for uploading and
 ├── process_tmp_img.php
 ├── reset.php
 ├── sign_up.php
-├── stickers
-│   ├── stickers_1.png
-│   ├── stickers_2.png
-│   └── stickers_3.png
 ├── upload.php
 ├── upload_2.php
 ├── verified.php
